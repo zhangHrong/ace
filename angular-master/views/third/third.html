@@ -1,0 +1,143 @@
+<div id="ssssrt" style="padding: 10px;" ng-controller="third">
+	<!-- 1 -->
+	<div class="formList clearfix">
+		<ul>
+			<li>
+				<label class="lab">复选框：</label>
+				<input id="ra1" type="checkbox" name="iCheck1"><span class="checval">代码</span>
+				<input id="ra2" type="checkbox" name="iCheck1" checked="checked"><span class="checval">素材</span>
+				<input id="ra3" type="checkbox" name="iCheck1" disabled="disabled"><span class="checval">模版</span>
+			</li>
+			<li>
+				<label class="lab">单选框：</label>
+				<input id="ra5" type="radio" name="iCheck2"><span class="checval">代码</span>
+				<input id="ra6" type="radio" name="iCheck2" disabled="disabled"><span class="checval">素材</span>
+				<input id="ra7" type="radio" name="iCheck2" checked="checked"><span class="checval">模版</span>
+			</li>
+			<li>
+				<label class="lab">上传：</label>
+				<input class="inp" type="text" placeholder="只支持png格式,大小1M以内" ng-model="fileItem.name"/>
+				<a class="uploadBtn layui-btn" href="javascript:;">
+					<input type="file" nv-file-select="" accept="image/x-png" ng-click="clearItems()" uploader="uploader" name="key"/> 上传
+				</a>
+			</li>
+			<li>
+				<label class="lab">集群账户：</label>
+				<div class="select sec1">
+					<span data-id="" class="placeholder">请选择</span>
+					<ul>
+						<li ng-repeat="inm in parmidList" data-id="{{inm.rmId}}">{{inm.custNm}}</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<label class="lab">账户：</label>
+				<div class="select">
+					<span data-id="" class="placeholder">请选择</span>
+					<ul>
+						<li ng-repeat="inm in parmidList" data-id="{{inm.rmId}}">{{inm.custNm}}</li>
+					</ul>
+				</div>
+				<span class="checval">代码</span>
+			</li>
+		</ul>
+	</div>
+	<div class="text-center">
+		<button class="layui-btn">重置</button>
+		<button class="layui-btn">查询</button>
+	</div>
+	<!-- 2 -->
+	<div class="layui-btn-group">
+        <button ng-click="add()" class="btn btn-info">增加</button>
+        <button ng-click="amend()" class="btn btn-info">编辑</button>
+        <button ng-click="del()" class="btn btn-info">删除</button>
+		<button ng-click="UploadFile()" class="btn btn-info">demo</button>
+    </div>
+	<!-- 3 -->
+	<table id="tabv" class="monry_table">
+		<thead>
+			<tr>
+				<th>
+					<input id="allcheck" type="checkbox" name="iCheck1">
+					<span class="checval">全选</span>
+				</th>
+				<th>集群名称</th>
+				<th>现金池状态</th>
+				<th>现金池名称</th>
+				<th>现金池账号</th>
+			</tr>
+		</thead>
+		<tbody class="careinput">
+			<tr ng-repeat="info in tCashPoolInfTmp">
+				<td><input type="checkbox" name="iCheck1"><span class="checval">{{$index+1}}</span></td>
+				<td><a ng-click="detil(info)" href="javascript:;">{{info.accno}}</a></td>
+				<td>
+					<div class="select">
+						<span data-id="{{info.parmId}}" class="placeholder">{{info.parcNm}}</span>
+						<ul>
+							<li ng-repeat="inm in parmidList" data-id="{{inm.rmId}}">{{inm.custNm}}</li>
+						</ul>
+					</div>
+				</td>
+				<td>{{info.emon}}</td>
+				<td>{{info.advonset}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- 4 -->
+	<!-- 新增-弹出层 -->
+	<div class="pup" style="display: none;">
+		<div class="pup-wraper">
+			<div class="formList clearfix">
+				<ul>
+					<li>
+						<label class="lab must">集群名称：</label>
+						<input id="queryName" class="inp" type="text" value="" />
+					</li>
+					<li>
+						<label class="lab must">现金池状态：</label>
+						<div class="select">
+							<span id="poolType" data-id="" class="placeholder">请选择</span>
+							<ul>
+								<li ng-repeat="inm in parmidList" data-id="{{inm.rmId}}">{{inm.custNm}}</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<label class="lab must">现金池名称：</label>
+						<input id="poolName" class="inp" type="text" value="" />
+					</li>
+					<li>
+						<label class="lab must">现金池账号：</label>
+						<input id="queryAccno" class="inp" type="text" value="" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 详情-弹出层 -->
+	<div class="pup-ditile" style="display: none;">
+		<div class="pup-wraper">
+			<div class="formList clearfix">
+				<ul>
+					<li>
+						<label class="lab must">集群名称：</label>
+						<i class="checval">{{ditil.accno}}</i>
+					</li>
+					<li>
+						<label class="lab must">现金池状态：</label>
+						<i class="checval">{{ditil.parcNm}}</i>
+					</li>
+					<li>
+						<label class="lab must">现金池名称：</label>
+						<i class="checval">{{ditil.emon}}</i>
+					</li>
+					<li>
+						<label class="lab must">现金池账号：</label>
+						<i class="checval">{{ditil.advonset}}</i>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

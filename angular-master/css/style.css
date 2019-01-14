@@ -1,0 +1,147 @@
+/* 重置 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,a,span,i,b{margin:0;padding:0}
+a{text-decoration:none;}
+*{outline:none;}
+i,em{font-style:normal;}
+
+/* 字体 */
+.fz-12{ font-size: 12px;}
+.fz-14{ font-size: 14px;}
+.fz-16{ font-size: 16px;}
+.fz-18{ font-size: 18px;}
+
+/*色值*/
+.cor-red{ color: #d44640;}
+
+/* 间距 */
+.m0{margin:0;!important;}
+.mt10{margin-top:10px;}
+.mr10{margin-right:10px;}
+.mb10{margin-bottom:10px;}
+.ml10{margin-left:10px;}
+.mt15{margin-top:15px;}
+.mr15{margin-right:15px;}
+.mb15{margin-bottom:15px;}
+.ml15{margin-left:15px;}
+.mt20{margin-top:20px;}
+.mr20{margin-right:20px;}
+.mb20{margin-bottom:20px;}
+.ml20{margin-left:20px;}
+.p0{padding: 0!important;}
+.pt10{padding-top:10px;}
+.pr10{padding-right:10px;}
+.pb10{padding-bottom:10px;}
+.pl10{padding-left:10px;}
+.pt15{padding-top:15px;}
+.pr15{padding-right:15px;}
+.pb15{padding-bottom:15px;}
+.pl15{padding-left:15px;}
+.pt20{padding-top:20px;}
+.pr20{padding-right:20px;}
+.pb20{padding-bottom:20px;}
+.pl20{padding-left:20px;}
+
+/*对齐方式*/
+.float-left{float: left;}
+.float-right{float: right ;}
+.float-none{float:none !important;}
+.text-left{text-align: left !important;}
+.text-right{text-align: right !important;}
+.text-center{text-align: center !important;}
+.dmiddle{display: inline-block;vertical-align: middle;*display: inline;*zoom: 1;}
+
+/* 文字对齐 */
+.e-jusy{ text-align: justify;}
+
+/* 定位 */
+.e-absolute{position: absolute;}
+.e-fixed{position: fixed;}
+.e-relative{position: relative;}
+
+/*间距*/
+.space-30{ max-height: 1px; min-height: 1px; overflow: hidden; margin: 15px 0 14px; clear: both;}
+
+/* 表格 */
+.monry_table{ width: 100%; margin: 10px 0;}
+.monry_table tr{ height: 32px; line-height: 32px;}
+.monry_table tr th,.monry_table tr td{ border: 1px solid #e6e6e6; text-align: center; padding:4px;}
+.monry_table tr th{ font-size: 14px; color: #fff; border:1px solid #33aba1; background: #33aba1;}
+.monry_table tr td{ font-size: 14px; color: #555;}
+.monry_table .select{ max-width: 100%;}
+.monry_table .select span{ height: 28px; line-height: 28px;}
+.monry_table .select li{ height: 30px; line-height: 30px;}
+.monry_table tr th .checval{ color: #fff;}
+
+/* 导航 */
+.menu{ background: #33aba1;}
+.menuList li{ float: left; list-style: none;}
+.menuList li a{ display: block; color: #fff; text-decoration: none; outline: none; width: 120px; height: 40px; line-height: 40px; text-align: center;}
+
+/* 表单 */
+.formList ul li{ width: 50%; float: left; padding: 10px 0; font-size: 0;}
+
+/* 下拉 */
+.select { position: relative; display: inline-block; border: 1px solid #e6e6e6; width: 100%; max-width: 55%; color: #555; vertical-align: middle; text-align: left; user-select: none; -webkit-touch-callout: none;}
+.select .placeholder { position: relative; display: block; background-color: #fff; font-size: 14px; color: #555; z-index: 1; padding: 0 5px; height: 34px; line-height: 34px; border-radius: 2px; cursor: pointer;}
+.select .placeholder:after { position: absolute; right: 0.2em; top: 50%; transform: translateY(-50%); font-family: 'iconfont'; font-size: 25px; content: '\e63e'; color: #e6e6e6; z-index: 10;}
+.select.is-open .placeholder:after { content: '\e63d'; color: #e6e6e6;}
+.select.is-open ul { display: block;}
+.select ul { display: none; position: absolute;  border: 1px solid #e6e6e6; overflow: hidden; width: 100%; background: #fff; border-radius: 2px; top: 100%; left: -1px; list-style: none; margin: 5px 0 0 0; padding: 0; z-index: 100;}
+.select ul li { display: block; text-align: left; width: 100%; height: 36px; font-size: 14px; line-height: 36px; padding:0 1em; color: #555; cursor: pointer;}
+.select ul li:hover { background: #33aba1; color: #fff;}
+
+/* 下拉禁用 */
+.disab{ overflow: hidden;}
+.disab .placeholder { background: #f5f5f5; color: #555;}
+.disab.is-open .placeholder:after { content: '\e63e'; color: #e6e6e6;}
+
+/* 弹出层 */
+.pup-wraper{ padding: 10px;}
+
+/* label input textarea btn */
+.lab{ display: inline-block; vertical-align: middle; text-align: right; width: 30%; font-size: 14px; color: #2e3e52;}
+.must:before{ background: url(../img/icon-must.png) 0 0 no-repeat; display: inline-block; vertical-align: middle; width: 11px; height: 11px; background-size:50%; content:'';}
+.inp{ display: inline-block; vertical-align: middle; width: 55%; font-size: 14px; color: #555; padding: 0 5px; border: 1px solid #e6e6e6; height: 34px; line-height: 34px;}
+.checval{ display: inline-block; vertical-align: middle; font-size: 14px; color: #555; padding: 0 15px 0 5px;}
+.tre{ display: inline-block; vertical-align: middle; border: 1px solid #e6e6e6; height: 90px; padding: 10px;}
+.listre{ width: 100%!important}
+.listre .lab{ width: 15%;}
+.listre .tre{ width: 77.5%;}
+.layui-btn{height: 34px; line-height: 34px;}
+.uploadBtn{ height: 34px; line-height: 34px; background: #e6e6e6; color: #555!important; text-align: center; position: relative;}
+.uploadBtn input[type="file"]{width: 65px; height: 34px; position: absolute; left: 0; top: 0; right: 0; opacity: 0;filter:alpha(opacity=80);}
+
+/* 第二页 */
+.conlef{ position: absolute; top: 50px; bottom: 0; width: 260px; border: 1px solid #33aba1;}
+.conrig{ margin-left: 270px; margin-top: 10px;}
+.conrig .navcont{ border: 1px solid #33aba1;}
+.navlist ul{ margin-right: -5px;}
+.navlist li{ float: left; list-style: none; margin-right: 5px;}
+.navlist li a{ background: #33aba1; display: block; color: #fff; text-decoration: none; outline: none; width: 120px; height: 40px; line-height: 40px; text-align: center;}
+.navlist li a.active{ background: #009689;}
+/* .navlist li a:hover{opacity:.8;filter:alpha(opacity=80);color:#fff} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

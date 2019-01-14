@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/layer.css">
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_998045_86h1d6d54u.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/zTreeStyle.css">
+		<link rel="stylesheet" href="css/icheck.css">
+</head>
+<!-- 设置打印去掉页眉页脚 -->
+<style media="print">
+    .pup-ditile{
+      size: auto;  /* auto is the initial value */
+      margin: 0mm; /* this affects the margin in the printer settings */
+    }
+</style>
+<body>
+<div>
+    <div>
+        <div ng-include="'views/common/menu.html'"></div>
+        <div ng-cloak ui-view></div>
+    </div>
+</div>
+<script src="libs/angular.js"></script>
+<script src="libs/angular-file-upload.min.js"></script>
+<script src="libs/angular-ui-router.js"></script>
+<script src="libs/jquery-1.11.3.min.js"></script>
+<script src="libs/echarts.js"></script>
+<script src="libs/layer.js"></script>
+<script src="libs/jquery.ztree.core.js"></script>
+<script src="libs/icheck.js"></script>
+<script src="public.js"></script>
+<script src="app.js"></script>
+<script src="module/first/firstController.js"></script>
+<script src="module/second/secondController.js"></script>
+<script src="module/third/thirdController.js"></script>
+</body>
+</html>

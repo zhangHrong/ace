@@ -1,0 +1,29 @@
+<div ng-controller="first">
+	<table id="tabv" class="monry_table">
+		<tr>
+			<th>序号</th>
+			<th>账号</th>
+			<th ng-click="desc=!desc">账号</th>
+			<th>账号</th>
+			<th>账号</th>
+			<th>账号</th>
+			<th>账号</th>
+			<th>账号</th>
+			<th>账号</th>
+			<th>账号</th>
+		</tr>
+		<tr ng-repeat="info in tCashPoolInfTmp | orderBy:'accnm':desc">
+			<td>{{$index+1}}</td>
+			<td>{{info.accno}}</td>
+			<td>{{info.accnm}}</td>
+			<td>{{info.emon}}</td>
+			<td>{{info.advonset}}</td>
+			<td>{{info.menuId}}</td>
+			<td>{{info.menuName}}</td>
+			<td>{{info.menuParent}}</td>
+			<td>{{info.menuLevel}}</td>
+			<td>{{info.menuOrder}}</td>
+		</tr>
+	</table>
+	<div id="pagination_15"></div>
+</div>

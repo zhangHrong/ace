@@ -1,0 +1,18 @@
+<div ng-controller="second">
+	<!-- 1 -->
+	<div class="conlef resizeH">
+		<ul id="ztree" class="ztree"></ul>
+	</div>
+	<!-- 2 -->
+	<div class="conrig resizeH">
+		<div class="navlist clearfix">
+			<ul>
+				<li><a class="active" ng-click="indexType($event)" href="javascript:;">首页</a></li>
+				<li ng-repeat="list in arryTab"><a data-id="{{list.id}}" ng-click="linkType($event)" class="" href="javascript:;">{{list.name}}</a></li>
+			</ul>
+		</div>
+		<div class="navcont">
+			<div ng-include="filename"></div>
+		</div>
+	</div>
+</div>
